@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    margin-left: 16px;
+    padding: 0;
+    background-image: url("miniboss.jpg");
+    background-repeat: no-repeat;
+    background-size: 24%;
+    background-position: center;
+    background-position-y: 0;
+    width: 100vw;
+    justify-content: center;
+}
+
+img {
+    
+    
+}

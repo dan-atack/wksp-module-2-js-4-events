@@ -47,46 +47,46 @@ These events fire when the HTML elements you can interact with gain/ lose focus.
 
 ##### Mouse Events
 
-- `click`
-- `dblclick`
-- `mousedown`
-- `mouseup`
-- `mouseover`
-- `mouseout`
-- `mousemove`
+- `click`        -- 'nuff said
+- `dblclick`     -- ditto
+- `mousedown`    -- holding the mouse button down on something
+- `mouseup`      -- releasing the mouse button
+- `mouseover`    -- hover
+- `mouseout`     -- when you move away from hovering
+- `mousemove`    -- whenever the mouse moves
 
 ---
 
 ##### Keyboard Events
 
-- `input`
-- `keydown`
-- `keypress`
-- `keyup`
+- `input`      -- typing into an input field
+- `keydown`    -- holding down a key
+- `keypress`   -- single keystroke
+- `keyup`      -- releasing a key that was held down
 
 ---
 
 ### Form Events
 
-- `submit`
-- `change`
-- `input`
+- `submit`       -- submitting a form
+- `change`       -- any typing that occurs in a form input element
+- `input`        -- like change but... ah...
 
 ---
 
-### HTML5 Events
+### HTML5 Events  -- seldom used by Scott, but here they are nonetheless:
 
-- `DOMContentLoaded`
-- `hashchange`
-- `beforeunload`
+- `DOMContentLoaded`  -- when the page loads, or when specific content loads
+- `hashchange`        -- when you reload your hashpipe (not really, it's about changes in the url like when you link to another                                  location within the page... not very common according to Scott.)
+- `beforeunload`      -- to try to prevent people from leaving
 
 ---
 
 ### CSS Events
 
-- `transitionend`
-- `animationstart`
-- `animationend`
+- `transitionend`     -- when a css transition ends, fire
+- `animationstart`    -- when an animation starts, fire
+- `animationend`      -- when an animation ends, fire
 
 ---
 
@@ -98,7 +98,23 @@ All DOM nodes have methods we can use to _notify_ us of an event.
 - [`removeEventListener()`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener)
 
 ```js
-// Example
+
+// Example:
+
+const button - document.getElementById('btn');
+button.addEventListener('click', function() {   // Better still, we can extract this function so we don't have to repeat ourselves 
+    console.log("ouch");                        // when it's time to turn off the listener. (see below):
+});
+
+
+const button - document.getElementById('btn');  // create button
+function handleOuch = function() {              // define function separately
+    console.log("ouch");                        // incidentally, the 'handle' prefix is very common for click-event functions
+};
+button.addEventListener('click', handleOuch);   // add function
+
+button.removeEventListener('click', handleOuch);  // remove function when it's no longer needed
+
 
 ```
 

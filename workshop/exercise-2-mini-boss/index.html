@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MiniBoss Fight #1!</title>
+        <link href="style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <audio id="mars" src="mars.mp3" type="audio/mp3">Your browser has insufficient awesomeness to hear the audio for this page.</audio>
+        <h1>MINIBOSS 1 FIGHT!!!</h1>
+        <p class="rightnow">
+            <span>CURRENT TIME: </span>
+            <span id="currentTime">00:00:00</span>
+            <button id="freeze">FREEZE TIME</button>
+        </p>
+        <p class="stopwatch">
+            <span>STOP WATCH:</span>
+            <span id="display">00:00:00</span>
+            <button id="start">START</button>
+            <button id="stop">STOP</button>
+        </p>
+        <p class="timer">
+            <p>TIMER</p>
+            <span>Countdown from: </span>
+            <input id="countdown" type="text" placeholder="ex. 120">
+            <button id="timerstart">GO!</button>
+            <span id="timerDisplay">00:00</span>
+            <button id="reset">RESET</button>
+        </p>
+        <p class="explanatory">
+            (Please enter time for timer function in the form of a number of seconds. The timer function will conver that to minutes just over to the right of the go button; e.g. 120 seconds = 2 minutes. Thank you!)
+        </p>
+        <p class="explanatory" id="p2">... By the way, do you notice I've been using a lot more brackets and semicolons in my regular writing lately?</p>
+        <script src="script.js"></script>
+    </body>
+</html>
